@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+:root {
+	--text-color: #2b394a;
+	--nav-color: #fda5a4;
+	--bg-color-1: #fff0f0;
+	--bg-color-2: #ffcfce;
+	--heading-font: "Roboto", sans-serif;
+	--body-font: "Lora", serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: var(--body-font);
+	color: var(--text-color);
+}
+
+.container {
+	background-color: var(--bg-color-1);
+}
+
+.home-content,
+.nav-title,
+nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+header {
+	height: 100vh;
+}
+
+header .home-content {
+	height: 100%;
+}
+
+.home-content {
+	justify-content: space-evenly;
+}
+
+.home-content > div {
+	/* background-color: hotpink; */
+	width: 50%;
+}
+
+.home-image1 {
+	max-width: 50%;
+	height: auto;
+	/* background-color: gray; */
+}
+
+.home-image2 {
+	width: 50%;
+	height: auto;
+}
+
+.home-content,
+.nav-header,
+.footer-container {
+	width: 85%;
+	margin: auto;
+}
+
+/* nav section */
+.nav-header {
+	justify-content: space-between;
+	padding: 0.75rem 0;
+}
+
+.nav-container,
+footer {
+	background-color: var(--nav-color);
+}
+
+.nav-title h1 {
+	margin-left: 1rem;
+}
+
+.home-content div h1 {
+	font-size: 5rem;
+}
+
+.home-content div h3 {
+	font-family: var(--body-font);
+	font-weight: 400;
+}
+
+/* middle-section & last-section */
+
+.middle-section {
+	width: 100%;
+	background-color: var(--bg-color-2);
+}
+
+.last-section,
+.middle-section {
+	padding: 6rem 0;
+}
+
+/* footer */
+.footer-container {
+	display: grid;
+	padding: 1.25rem 0;
+	grid-template-columns: repeat(3, auto);
+	grid-template-rows: repeat(2, auto);
+	grid-template-areas:
+		"nav-footer nav-social logo"
+		"text1 text1 logo";
+}
+
+.nav-footer {
+	grid-area: nav-footer;
+}
+
+.nav-footer ul li a {
+	margin: 0 2.5rem 0 0;
+}
+
+.nav-social {
+	grid-area: nav-social;
+	justify-self: start;
+}
+
+.nav-social ul li a {
+	margin: 0 1.25rem 0 0;
+}
+
+.footer-container p {
+	grid-area: text1;
+}
+
+.img-logo {
+	grid-area: logo;
+	justify-self: start;
+}
+
+footer p {
+	margin: 0 0;
+}
+
+/* utilities */
+h1 {
+	font-family: var(--heading-font);
+}
+
+.img-logo {
+	width: 50px;
+	height: 50px;
+}
+
+.social-media-logo {
+	width: 25px;
+	height: 25px;
+}
+
+p {
+	line-height: 1.5rem;
+	margin: 0 2rem;
+	/* background-color: hotpink; */
+}
+
+ul {
+	list-style-type: none;
+	display: flex;
+}
+
+ul li a {
+	text-decoration: none;
+	margin: 0 1.25rem;
+	font-family: var(--heading-font);
+}
