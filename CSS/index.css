@@ -32,13 +32,20 @@ nav {
 
 .sponsor-header,
 .home-header {
-	height: 100vh;
+	height: auto;
 }
 
-.sponsor-header-content,
-.home-header .home-content {
-	height: 100%;
+#header-content {
+	padding: 5rem 0;
 }
+
+/* .sponsor-header-content {
+	height: 100%;
+} */
+
+/* .home-header .home-content {
+	height: 100%;
+} */
 
 .home-content {
 	justify-content: space-evenly;
@@ -374,6 +381,61 @@ button:focus {
 	.nav-title,
 	.nav-header ul {
 		padding: 0.5rem 0;
+	}
+
+	.sponsor-header-content div h1,
+	.home-header .home-content h1 {
+		font-size: 3rem;
+	}
+}
+
+@media (max-width: 700px) {
+	.light-section .home-content,
+	.dark-section .home-content,
+	.home-header .home-content {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.dark-section .home-content *,
+	.light-section .home-content *,
+	.home-header .home-content * {
+		padding: 0.75rem 0;
+		text-align: center;
+	}
+
+	.sponsor-header-content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.sponsor-header-content > * {
+		padding: 1rem 0;
+		text-align: center;
+	}
+
+	#header-content {
+		padding: 3rem 0;
+	}
+
+	#sponsor-now {
+		text-align: center;
+	}
+
+	.sponsor-header,
+	.home-header {
+		height: auto;
+	}
+
+	.sponsor-container {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.sponsor-container * {
+		padding: 0.75rem 0;
 	}
 }
 
